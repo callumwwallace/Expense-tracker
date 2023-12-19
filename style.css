@@ -173,6 +173,7 @@ li {
     background-color: #f0f0f0;
     padding: 8px 16px;
     border-radius: 4px;
+    list-style: none; /* Add this line to remove bullet points */
 }
 
 li:hover {
