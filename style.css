@@ -192,12 +192,3 @@ select {
     font-size: 1rem;
 }
 
-form .inline-inputs {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-}
-
-form .inline-inputs div {
-    flex: 1;
-}
