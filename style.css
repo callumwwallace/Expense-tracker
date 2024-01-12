@@ -119,7 +119,7 @@ form input#type {
     position: absolute;
     top: 5px;
     left: 0;
-    background-color: #fff;
+    background-color: rgba(147, 112, 219, 0.25);
     height: calc(100% - 10px);
     width: calc(50% - 10px);
     transform: translateX(5px);
