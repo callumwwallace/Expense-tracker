@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-
-<!-- Designed and developed by Callum Wallace -->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
     <title>Expense tracker</title>
 </head>
 <body>
-<h1 style = "text-transform: uppercase;">Expense tracker</h1>
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">Dark Theme</button>
+<h1 style="text-transform: uppercase;">Expense tracker</h1>
 <main>
     <div class="container">
         <section class="box" id="leftbox">
@@ -21,7 +19,7 @@
                     <label for="savefileusername">Username</label>
                     <input type="text" id="savefileusername" name="savefileusername" required>
                     <label for="savefilepassword">Password</label>
-                    <input type="text" id="savefilepassword" name="savefilepassword" required>
+                    <input type="password" id="savefilepassword" name="savefilepassword" required>
                     <button type="submit">Create save file</button>
                 </form>
                 <h3>Load save file</h3>
@@ -30,7 +28,7 @@
                     <label for="loadsavefileusername">Username</label>
                     <input type="text" id="loadsavefileusername" name="loadsavefileusername" required>
                     <label for="loadsavefilepassword">Password</label>
-                    <input type="text" id="loadsavefilepassword" name="loadsavefilepassword" required>
+                    <input type="password" id="loadsavefilepassword" name="loadsavefilepassword" required>
                     <button type="submit">Load save file</button>
                 </form>
             </div>
@@ -54,11 +52,11 @@
 
             <section>
                 <h3>History</h3>
-                <div id="transactions">
+                <div id="transactions" class="transaction-container">
                     <ul id="transactionlist"></ul>
-                    <li>test</li>
                 </div>
             </section>
+
 
             <section>
                 <h3>Transaction</h3>
@@ -94,10 +92,8 @@
             <h3>Note list</h3>
             <div id="usernoteslist">
                 <ul id="noteslist"></ul>
-                <li>test</li>
-                <h3>Add note</h3>
                 <form id="addnote">
-                    <label style="margin-top: 5px;" for="notetext">Note</label>
+                    <label style="margin-top: 5px;" for="notetext">Type note</label>
                     <input type="text" id="notetext" required>
                     <button type="submit">Submit</button>
                 </form>
@@ -105,5 +101,6 @@
         </section>
     </div>
 </main>
+<script src="script.js" defer></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* Base styles */
 * {
     padding: 0;
     margin: 0;
@@ -5,9 +6,92 @@
 }
 
 body {
-    background-color: floralwhite;
+    background-color: #fafafa;
+    color: #030303;
     padding: 2rem;
     font-family: "Arial Rounded MT Bold", sans-serif;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: #ccc;
+}
+
+body.dark-theme .box {
+    background-color: #2a2a2a;
+    border-color: #3a3a3a;
+}
+
+body.dark-theme header {
+    background-color: #333;
+    color: #ccc;
+}
+
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3 {
+    color: #fff;
+}
+
+body.dark-theme input, body.dark-theme button {
+    background-color: #333;
+    color: #ccc;
+    border: 1px solid #444;
+}
+
+body.dark-theme input:hover, body.dark-theme button:hover {
+    background-color: #444;
+}
+
+body.dark-theme li {
+    background-color: #333; /* Darker background for list items */
+    color: #ccc; /* Lighter text color for readability */
+    border: 1px solid #444; /* Slight border for definition */
+}
+
+/* Enhance the hover effect in dark theme for better interactivity */
+body.dark-theme li:hover {
+    background-color: #444; /* Slightly lighter on hover */
+    cursor: pointer;
+}
+
+/* Adjusting text color inside list items if there are specific elements */
+body.dark-theme li h1,
+body.dark-theme li h2,
+body.dark-theme li h3,
+body.dark-theme li p {
+    color: #ccc; /* Ensure all text is easily readable */
+}
+
+.transaction-container {
+    max-height: 200px; /* Set maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds container height */
+}
+
+
+/* Theme toggle button */
+.theme-toggle {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s, transform 0.3s;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-size: 1rem;
+}
+
+.theme-toggle:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+.theme-toggle:focus {
+    outline: none;
+    border-color: #333;
 }
 
 h1 {
@@ -68,7 +152,6 @@ header div:nth-child(n+2) {
 header h4 {
     font-size: 0.75rem;
     font-weight: 600;
-    /*text-transform: uppercase;*/
 }
 
 form {
@@ -131,6 +214,24 @@ form input#type {
 form input#type:checked ~ .option::before {
     left: 50%;
 }
+
+/* Adjusting for dark theme */
+body.dark-theme .option {
+    background: #333;
+}
+
+body.dark-theme .option span {
+    color: #ccc;
+}
+
+body.dark-theme .option::before {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+body.dark-theme form input#type:checked ~ .option::before {
+    background-color: #5292a5;
+}
+
 /* End of checkbox styling */
 
 form button {
@@ -138,14 +239,11 @@ form button {
     color: white;
     font-size: 0.75rem;
     font-weight: 600;
-    /*text-transform: uppercase;*/
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 form label {
     font-size: 0.75rem;
     font-weight: 600;
-    /*text-transform: uppercase;*/
 }
 
 form div:first-child {
@@ -165,7 +263,6 @@ form div:nth-child(4) {
 ul {
     list-style-type: none;
     padding: 0;
-
 }
 
 li {
@@ -173,7 +270,6 @@ li {
     background-color: #f0f0f0;
     padding: 8px 16px;
     border-radius: 4px;
-    list-style: none; /* Add this line to remove bullet points */
 }
 
 li:hover {
@@ -192,3 +288,16 @@ select {
     font-size: 1rem;
 }
 
+.delete-btn {
+    margin-left: 10px;
+    background-color: #ff6347; /* Tomato */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.delete-btn:hover {
+    opacity: 0.8;
+}
