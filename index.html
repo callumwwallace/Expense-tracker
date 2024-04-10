@@ -8,7 +8,7 @@
 </head>
 <body>
 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">Dark Theme</button>
-<h1 style="text-transform: uppercase;">Expense tracker</h1>
+<h1 class = "titlebox">Expense tracker</h1>
 <main>
     <div class="container">
         <section class="box" id="leftbox">
@@ -97,8 +97,17 @@
                     <input type="text" id="notetext" required>
                     <button type="submit">Submit</button>
                 </form>
+
+                <h3>AI Suggestions</h3>
+                <ul id="aiSuggestionsList"></ul> <!-- AI Suggestions will appear here -->
+                <!-- Generate AI Suggestions Button is now below the AI Suggestions title -->
+                <form id ="aiSuggestionList">
+                    <button type="submit">Generate</button>
+                </form>
             </div>
         </section>
+
+
     </div>
 </main>
 <script src="script.js" defer></script>
