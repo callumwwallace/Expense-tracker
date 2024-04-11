@@ -215,3 +215,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const fontSizeToggleButton = document.getElementById('font-size-toggle');
+    let currentFontSizeIndex = 0; // 0 for default, 1 for larger, -1 for smaller
+    const fontSizes = ['0.875em', '1em', '1.125em']; // Smaller, default, larger
+
+    fontSizeToggleButton.addEventListener('click', function () {
+        currentFontSizeIndex++;
+        if (currentFontSizeIndex > 1) currentFontSizeIndex = -1;
+        document.documentElement.style.fontSize = fontSizes[currentFontSizeIndex + 1];
+    });
+});
